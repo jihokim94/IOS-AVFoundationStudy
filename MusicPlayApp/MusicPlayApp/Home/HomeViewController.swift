@@ -13,8 +13,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    
 }
 
 let trackManager = TrackManager()

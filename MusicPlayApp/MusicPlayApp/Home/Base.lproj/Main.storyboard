@@ -78,57 +78,58 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Pick!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNa-cf-lQp">
-                                            <rect key="frame" x="18" y="18" width="166.5" height="32.5"/>
+                                            <rect key="frame" x="18" y="18" width="200" height="32.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="he8-YB-g6q"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZ7-AH-nOB">
-                                            <rect key="frame" x="18" y="60.5" width="378" height="210"/>
+                                            <rect key="frame" x="18" y="70" width="378" height="210"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="210" id="kfc-6b-Ox8"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Now Today's pick is silo's album DD....,,,,,,,,,," lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CK-Jf-YFh">
-                                            <rect key="frame" x="27.5" y="204" width="227.5" height="58"/>
+                                            <rect key="frame" x="27.5" y="238" width="298.5" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="systemBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9o2-0Q-joa">
-                                            <rect key="frame" x="323.5" y="204.5" width="65.5" height="57"/>
-                                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="65.5" id="QCz-qB-48d"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Zen-DS-5vG"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="a1R-VC-cLY"/>
-                                                <constraint firstAttribute="height" constant="58" id="jCS-Fa-csl"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-aJ-J7F">
-                                            <rect key="frame" x="28" y="190.5" width="368" height="23"/>
+                                            <rect key="frame" x="28" y="200" width="368" height="23"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                             <color key="textColor" systemColor="systemBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brx-la-rvc">
+                                            <rect key="frame" x="341" y="211" width="47" height="45"/>
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <state key="normal" image="play.circle.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" weight="regular"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="cardTapped:" destination="bts-cj-30l" eventType="touchUpInside" id="Tw8-LY-nk7"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="mNa-cf-lQp" firstAttribute="leading" secondItem="bts-cj-30l" secondAttribute="leadingMargin" constant="10" id="5zg-Mr-iWC"/>
                                         <constraint firstItem="bF1-aJ-J7F" firstAttribute="trailing" secondItem="eZ7-AH-nOB" secondAttribute="trailing" id="DPS-l8-dw7"/>
-                                        <constraint firstItem="eZ7-AH-nOB" firstAttribute="top" secondItem="mNa-cf-lQp" secondAttribute="bottom" constant="10" id="Gqx-jS-FGK"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mNa-cf-lQp" secondAttribute="trailing" constant="20" symbolic="YES" id="Hh9-2s-dXz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="brx-la-rvc" secondAttribute="trailing" constant="18" id="JUE-gi-61f"/>
                                         <constraint firstItem="eZ7-AH-nOB" firstAttribute="leading" secondItem="bts-cj-30l" secondAttribute="leadingMargin" constant="10" id="SJm-wW-CYW"/>
                                         <constraint firstItem="eZ7-AH-nOB" firstAttribute="trailing" secondItem="bts-cj-30l" secondAttribute="trailingMargin" constant="-10" id="SYT-Zd-cv5"/>
-                                        <constraint firstItem="eZ7-AH-nOB" firstAttribute="trailingMargin" secondItem="9o2-0Q-joa" secondAttribute="trailing" constant="-1" id="Smi-2j-UxN"/>
-                                        <constraint firstItem="9o2-0Q-joa" firstAttribute="top" secondItem="0CK-Jf-YFh" secondAttribute="top" id="Sq4-SA-Ocp"/>
-                                        <constraint firstItem="mNa-cf-lQp" firstAttribute="top" secondItem="bts-cj-30l" secondAttribute="topMargin" constant="10" id="Tem-xI-ouW"/>
                                         <constraint firstItem="bF1-aJ-J7F" firstAttribute="top" secondItem="eZ7-AH-nOB" secondAttribute="top" constant="130" id="Tkq-wf-4yq"/>
-                                        <constraint firstItem="9o2-0Q-joa" firstAttribute="bottom" secondItem="0CK-Jf-YFh" secondAttribute="bottom" id="h6v-FN-hAw"/>
-                                        <constraint firstItem="eZ7-AH-nOB" firstAttribute="bottomMargin" secondItem="9o2-0Q-joa" secondAttribute="bottom" constant="0.5" id="ngi-Wu-j6d"/>
+                                        <constraint firstItem="0CK-Jf-YFh" firstAttribute="leading" secondItem="bts-cj-30l" secondAttribute="leadingMargin" constant="19.5" id="UvH-wo-2Mw"/>
+                                        <constraint firstItem="brx-la-rvc" firstAttribute="leading" secondItem="0CK-Jf-YFh" secondAttribute="trailing" constant="15" id="W06-CN-BHy"/>
+                                        <constraint firstItem="mNa-cf-lQp" firstAttribute="leading" secondItem="bts-cj-30l" secondAttribute="leadingMargin" constant="10" id="Xsb-Sv-DcT"/>
+                                        <constraint firstItem="mNa-cf-lQp" firstAttribute="top" secondItem="bts-cj-30l" secondAttribute="topMargin" constant="10" id="boE-Ya-21d"/>
+                                        <constraint firstItem="0CK-Jf-YFh" firstAttribute="top" secondItem="bF1-aJ-J7F" secondAttribute="bottom" constant="15" id="go1-ki-QR4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="brx-la-rvc" secondAttribute="bottom" constant="18" id="nGk-gc-JEY"/>
                                         <constraint firstItem="bF1-aJ-J7F" firstAttribute="leading" secondItem="eZ7-AH-nOB" secondAttribute="leading" constant="10" id="sET-O9-ugZ"/>
                                         <constraint firstItem="0CK-Jf-YFh" firstAttribute="leading" secondItem="bts-cj-30l" secondAttribute="leading" constant="27.5" id="uEg-gY-gAh"/>
-                                        <constraint firstItem="9o2-0Q-joa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0CK-Jf-YFh" secondAttribute="trailing" constant="8" symbolic="YES" id="xNS-u2-PTw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0CK-Jf-YFh" secondAttribute="bottom" constant="20" id="zxx-wq-FCm"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="descriptionLabel" destination="0CK-Jf-YFh" id="NJG-LE-DP5"/>
@@ -157,12 +158,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
